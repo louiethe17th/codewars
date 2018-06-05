@@ -1,0 +1,1 @@
+Function needs to take a string of a first and last name, and reduce it into the first initials seperated by a "."
