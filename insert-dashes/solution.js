@@ -1,15 +1,14 @@
-function insertDash(num) {
-    var numString = num.toString();
-    var newNum = numString.split('');
-   
-    for (var i in newNum) {
-      var x = i++;
-   
-      if (newNum[i] % 2 === 1 && newNum[x] % 2 === 1) {
-        newNum.splice(i, 0, '-');
+function insertDash(num){
+  var numSplit = num.toString().split('');
+  var numString = [];
+  // console.log(numSplit);
+  for(i = 0; i < numSplit.length; i++){
+      if(numSplit[i] % 2 === 1 && numSplit[i+1] % 2 === 1){
+          numString += numSplit[i] + '-';            
+      }else{
+          numString += numSplit[i];
       }
-    }
-   
-    newNum = newNum.join('');
-    return newNum
-   }
+  }
+  console.log(numString);
+return numString;
+}
